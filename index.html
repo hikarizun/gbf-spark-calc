@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GBF Spark Calculator</title>
+    <link rel="stylesheet" href="sparkstyle.css">
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>Spark Calculator</h1>
+      <hr>    <!--horizontal line-->
+
+      <div>
+        <label>Crystals: </label>
+        <input type="text" placeholder="Crystals you have" id="crystalTotal">
+      </div>
+      <div>
+        <label>10-part draw tickets: </label>
+        <input type="text" placeholder="10-part draw tickets you have" id="tenTixTotal">
+      </div>
+      <div>
+        <label>Single draw tickets: </label>
+        <input type="text" placeholder="Single draw tickets you have" id="oneTixTotal">
+      </div>
+      <hr>    <!--horizontal line-->
+
+      <div>
+          <label>Sparks you will get: </label><span id="sparkTotal"></span>
+      </div>
+      <button type="button" id="calc">Calculate</button>
+
+    </div>    <!--div container end-->
+
+    <script>
+      document.getElementById('calc').onclick = function() {
+        var crystals = Number(document.getElementById('crystalTotal').value);
+        var tenTix = Number(document.getElementById('tenTixTotal').value);
+        var oneTix = Number(document.getElementById('oneTixTotal').value);
+        var spark = Number(Math.trunc(crystals / 300) + (tenTix * 10) + oneTix);
+        document.getElementById('sparkTotal').innerHTML = spark;}
+    </script>
+
+  </body>
+</html>
