@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|ZCOOL+XiaoWei" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"
     <title>GBF Spark Calculator</title>
-    <link rel="stylesheet" href="sparkstyle.css">
-  </head>
+</head>
+<body>
+    <header>
+        <h1>Granblue Fantasy</h1>
+        <h2>Spark Calculator</h2>
+    </header>
 
-  <body>
-    <div id="container">
-      <h1>Spark Calculator</h1>
-      <hr>    <!--horizontal line-->
+    <div class="frame">
+        <div class="crystalBox">
+            <h3>Crystals</h3>
+            <input type="text" id="crystalTotal">
+        </div>
+        <div class="tenPartBox">
+                <h3>10-part Draw Tickets</h3>
+                <input type="text" id="tenTixTotal">
+        </div>
+        <div class="onePartBox">
+                <h3>Single Draw Tickets</h3>
+                <input type="text" id="oneTixTotal">
+        </div>
+        <div class="calcButton">
+            <button type="button" id="calc">Calculate</button>
+        </div>
+        <div class="totalSparkBox">
+                <h3>Total Sparks</h3>
+                <div id="sparkTotal"></div>
+        </div>
+        <div class="resetButton">
+                <button type="button" id="reset">Reset</button>
+        </div>
+    </div>
 
-      <div>
-        <label>Crystals: </label>
-        <input type="text" placeholder="Crystals you have" id="crystalTotal">
-      </div>
-      <div>
-        <label>10-part draw tickets: </label>
-        <input type="text" placeholder="10-part draw tickets you have" id="tenTixTotal">
-      </div>
-      <div>
-        <label>Single draw tickets: </label>
-        <input type="text" placeholder="Single draw tickets you have" id="oneTixTotal">
-      </div>
-      <hr>    <!--horizontal line-->
-
-      <div>
-          <label>Sparks you will get: </label><span id="sparkTotal"></span>
-      </div>
-      <button type="button" id="calc">Calculate</button>
-
-    </div>    <!--div container end-->
-
-    <footer>Made by Zun 2019</footer>
+    <footer>
+        Made by Zun and Chikin 2019
+    </footer>
 
     <script>
-      document.getElementById('calc').onclick = function() {
-        var crystals = Number(document.getElementById('crystalTotal').value);
-        var tenTix = Number(document.getElementById('tenTixTotal').value);
-        var oneTix = Number(document.getElementById('oneTixTotal').value);
-        var spark = Number(Math.trunc(crystals / 300) + (tenTix * 10) + oneTix);
-        document.getElementById('sparkTotal').innerHTML = spark;}
+            document.getElementById('calc').onclick = function() {
+              var crystals = Number(document.getElementById('crystalTotal').value);
+              var tenTix = Number(document.getElementById('tenTixTotal').value);
+              var oneTix = Number(document.getElementById('oneTixTotal').value);
+              var spark = Number(Math.trunc(crystals / 300) + (tenTix * 10) + oneTix); //math.trunc takes whole number value and ignores decimals
+              document.getElementById('sparkTotal').innerHTML = spark;}
+
+            document.getElementById('reset').onclick = function() {
+                document.getElementById('crystalTotal').value = "";
+                document.getElementById('tenTixTotal').value = "";
+                document.getElementById('oneTixTotal').value = "";
+                document.getElementById('sparkTotal').innerHTML = "";
+            }
     </script>
 
-  </body>
+</body>
 </html>
