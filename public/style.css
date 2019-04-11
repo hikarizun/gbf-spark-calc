@@ -1,0 +1,117 @@
+/*-----------global-----------*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+
+header {
+text-align: center;
+padding: 10px;
+}
+
+body {
+    background-image: url("http://www.mobileswall.com/wp-content/uploads/2015/04/640-Sky-HD-l.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 100;
+    color: #464343;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 100;
+    color: #272525;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+input {
+    height: 20px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+button {
+    background: url();
+    color: blue;
+    border: 2px solid #32b8ca;
+    border-radius: 6px;
+    padding: 10px 30px 10px 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+/*-----------body-----------*/
+.frame {
+    background-color: #857d7d;
+    width: 375px;
+    height: auto;
+    padding: 15px 0px;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.crystalBox,
+.tenPartBox,
+.onePartBox,
+.totalSparkBox {
+    background-color: #dfd8cf;
+    margin: 10px auto;
+    width: 235px;
+    height: 81px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+#sparkTotal {
+    font-size: 25px;
+    margin: 20px auto;
+}
+
+.calcButton {
+    text-align: center;
+}
+
+#calc {
+    background-image: linear-gradient(to bottom, #88d0ec, #0d5d8f)
+}
+
+#calc:active {
+    background-image: linear-gradient(to bottom, #faf87b, #2079b0)
+}
+
+.resetButton {
+    text-align: center;
+}
+
+#reset {
+    background-image: linear-gradient(to bottom, #f0c584, #d14109)
+}
+
+#reset:active {
+    background-image: linear-gradient(to bottom, #faf87b, #ec671a)
+}
+
+
+/*-----------footer-----------*/
+footer {
+    margin: 10px auto;
+    text-align: center;
+    color: rgb(56, 52, 52);
+}

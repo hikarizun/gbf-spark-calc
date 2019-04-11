@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|ZCOOL+XiaoWei" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"
+    <link rel="stylesheet" href="/public/style.css">
     <title>GBF Spark Calculator</title>
 </head>
 <body>
@@ -42,20 +42,7 @@
         Made by Zun and Chikin 2019
     </footer>
 
-    <script>
-            document.getElementById('calc').onclick = function() {
-              var crystals = Number(document.getElementById('crystalTotal').value);
-              var tenTix = Number(document.getElementById('tenTixTotal').value);
-              var oneTix = Number(document.getElementById('oneTixTotal').value);
-              var spark = Number(Math.trunc(crystals / 300) + (tenTix * 10) + oneTix); //math.trunc takes whole number value and ignores decimals
-              document.getElementById('sparkTotal').innerHTML = spark;}
-
-            document.getElementById('reset').onclick = function() {
-                document.getElementById('crystalTotal').value = "";
-                document.getElementById('tenTixTotal').value = "";
-                document.getElementById('oneTixTotal').value = "";
-                document.getElementById('sparkTotal').innerHTML = "";
-            }
+    <script src="/public/calculate.js" type="text/javascript">
     </script>
 
 </body>
