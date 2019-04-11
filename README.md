@@ -7,6 +7,6 @@ This is a simple calculator to calculate the total number of sparks you will get
 Link to the app: https://gbfsparkcalc.herokuapp.com/
 
 ## Authors
-*Coding by Zun
-*Design by Chikin
+*Coding by Zun <br>
+*Design by Chikin <br>
 This is our first project after self-learning web development! Although we may not have much time to make changes, feedback is welcomed on how we can improve our work :) 
